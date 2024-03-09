@@ -1,0 +1,21 @@
+What is Strategy Pattern ?
+
+Strategy is a behavirol design pattern that lets you define a family of algorithms, put each of them into separte class,
+and make thier objects interchangeable.
+
+The Strategy pattern suggests that you tkae a class that does something specific in a lot of different ways and extract all of these
+algorithms into separate classes and strategies.
+
+The original class must have a field for storing a reference to one of the strategies. And then delegates the work to a
+linked Strategy object instead of executing it on its own.
+
+Main class is not responsible for selecting the algorithms, instead the client passess the desired Strategy. 
+
+
+Example: Suppose we have a Duck class and there are mutiple classes which are inheriting this parent class.
+Duck class have a method quack which can be different for each child class. In this case we can use stratefy pattern.
+As we have multiple implementation of quack() behaviour.
+
+In this cases, we first create a interface for the Strategy behaviour which is quack and then for each implementation
+of quack we can implement Quack interface. In the main class (Duck) we can store a object of interface type and each child
+class should provice concrete implementation of Quack.
